@@ -39,11 +39,11 @@ const BasicForm = () => {
       <div id="todoItems">
           {state.map((item, index)=>{
             return(
-              <>
+              <div class="entry">
                 <p key={index}>{item}</p>
                 <button onClick={() => editEntry(index, item)}>edit</button>
                 <button onClick={()=> dispatch(removeTodo(index))}>&times;</button>
-              </>
+              </div>
             )
           })}
         </div>

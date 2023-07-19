@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+#todoItems .entry {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#todoItems .entry button {
+  max-height: 2em;
+  display: block;
+  margin: auto 1em;
+}
