@@ -28,7 +28,7 @@ const BasicForm = () => {
         initialValues={{
           "Add ToDo": '',
         }}
-        onSubmit={(values) => {dispatch(addTodo(values)); console.log(state)}}
+        onSubmit={(values, {resetForm}) => {dispatch(addTodo(values)); console.log(state); resetForm();}}
       >
         <Form>
           <label htmlFor="todo">Add ToDo </label>
