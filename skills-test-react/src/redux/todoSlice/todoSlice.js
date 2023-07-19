@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const getLocalStorage = () => {
+  if(!( localStorage.getItem('todoList'))) return JSON.stringify([]);
   const storage = localStorage.getItem('todoList');
   if(!storage || !storage.length){
-    return []
+    return JSON.stringify([])
   }else{
     return storage
   }
