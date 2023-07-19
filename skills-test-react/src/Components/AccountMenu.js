@@ -11,6 +11,7 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
+import Link from '@mui/material/Link';
 
 export default function AccountMenu({ onClick }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -24,8 +25,10 @@ export default function AccountMenu({ onClick }) {
   return (
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-        <Typography sx={{ minWidth: 100 }}>Contact</Typography>
-        <Typography sx={{ minWidth: 100 }}>profile</Typography>
+        <Link href="/" sx={{ minWidth: 100 }}>Home</Link>
+        <Link href="/contact" sx={{ minWidth: 100 }}>Contact</Link>
+        <Link href="/profile" sx={{ minWidth: 100 }}>Profile</Link>
+        <Link href="/todo" sx={{ minWidth: 100 }}>Todo</Link>
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
